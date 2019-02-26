@@ -1,3 +1,13 @@
+This fork was originally created to investigate a strange effect described in
+
+https://github.com/AlliedToasters/synapses/issues/1
+
+See https://github.com/anhinga/synapses/blob/master/regularization.md and associated experimental notebook(s) for details...
+
+Original README.md file follows:
+
+---
+
 # Synapses
 ## A Pytorch Implementation of [Sparse Evolutionary Training (SET)](https://arxiv.org/abs/1707.04780) for Neural Networks
 Based on [research](https://www.nature.com/articles/s41467-018-04316-3) published by Mocanu et al., "Scalable Training of Artificial Neural Networks with Adaptive Sparse Connectivity inspired by Network Science"<br><br>
