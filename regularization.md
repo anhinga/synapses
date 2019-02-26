@@ -40,4 +40,12 @@ def show_MNIST_connections(model):
 
 The first couple of points on those trend curves are too jittery to matter much, but the rest give a good idea of how the connectivity changes from the center of the square to its borders.
 
-**This is currently work in progress, with further software experiments currently running. I expect to post a longer version of experiment_1 (the run is done), also an ongoing run with 1e-2 regularization (which seems to learn the topology even better, but converges way too slowly), and a couple of additional runs after that. And I am also going to edit this write-up - I expect to be mostly done with all this by March 4, 2019.**
+**This is currently work in progress, with further software experiments currently running. Here is a longer version of experiment_1:**
+
+https://github.com/anhinga/synapses/blob/master/Experiment_1_complete.ipynb
+
+**Here is a similar run with 1e-2 regularization (which seems to learn the topology even better, but converges way too slowly):**
+
+https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
+
+**I am going to do a couple of additional runs after that. And I am also going to edit this write-up - I expect to be mostly done with all this by March 4, 2019.**
