@@ -1,6 +1,16 @@
+** work in progress; should be done by March 4, 2019**
+
+# Regularization in intrinsically sparse networks
+
+
 This fork was originally created to investigate a strange effect described in
 
 https://github.com/AlliedToasters/synapses/issues/1
+
+## Conjectures and high-level description of experimental findings
+
+
+## Details of experiments with regularization
 
 The first experimental notebook confirmes the conjecture stated in that issue:
 
@@ -39,6 +49,12 @@ def show_MNIST_connections(model):
 ```
 
 The first couple of points on those trend curves are too jittery to matter much, but the rest give a good idea of how the connectivity changes from the center of the square to its borders.
+
+
+
+## Baseline study
+
+## Future work
 
 **This is currently work in progress, with further software experiments currently running. Here is a longer version of experiment_1:**
 
