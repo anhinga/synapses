@@ -38,11 +38,11 @@ The main conjecture I made was that the **negative learning** effect was related
 
 At the same time, if one were to add a sufficiently strong regularization encouraging smaller weights, then one would expect the connections which are not informative to the result to decrease on average more rapidly, than the connections which are informative.
 
-The experiments we performed here and are describing below seem to confirm this conjecture. Namely, **when one adds sufficiently strong reglarization, negative learning is replaced by positive learning, and the stronger regularization is, the more pronounced is this effect**.
+The experiments I performed here and am describing below seem to confirm this conjecture. Namely, **when one adds sufficiently strong reglarization, negative learning is replaced by positive learning, and the stronger regularization is, the more pronounced is this effect**.
 
 ---
 
-We do observe one more puzzling effect during those baseline runs which demonstrate overfitting/failure to generalize. There are two measures of quality involved here: the **loss function** for which one trains, and **accuracy**. Usually, trends in the loss function and in the accuracy go hand in hand, both in training and in test (validation): they tend to improve simultaneously. However, when the overfitting/failure to generalize is serious, the loss function in test (validation) stops improving and starts to get worse and worse, while the loss function in training keep converging. 
+I do observe one more puzzling effect during those baseline runs which demonstrate overfitting/failure to generalize. There are two measures of quality involved here: the **loss function** for which one trains, and **accuracy**. Usually, trends in the loss function and in the accuracy go hand in hand, both in training and in test (validation): they tend to improve simultaneously. However, when the overfitting/failure to generalize is serious, the loss function in test (validation) stops improving and starts to get worse and worse, while the loss function in training keep converging. 
 
 However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting. Why this is so remains a mystery to me.
 
@@ -57,11 +57,11 @@ The remainder of this write-up includes the following sections:
 
 ## Details of experiments with regularization
 
-We mostly work with the first experiment conducted by Michael Klear (the one which involves `SparseNet` class), although at the end of the paper we do a bit of experimental work with the subsequent triplet of experiments there (they involve `EvolNet` class).
+I mostly work with the first experiment conducted by Michael Klear (the one which involves `SparseNet` class), although at the end of this write-up I describe a bit of experimental work with the subsequent triplet of experiments there (they involve `EvolNet` class).
 
-The identical runs give results in the same ballpark, but do not reproduce precisely despite the presence of `torch.manual_seed(0)` random seed setting in the code (it might be that all that is needed is to move this random seed setting closer to the beginning of the code).
+The identical runs give results in the same ballpark, but do not reproduce precisely despite the presence of `torch.manual_seed(0)` random seed setting in the original code (it might be that all that is needed is to move this random seed setting closer to the beginning of the code).
 
-We studied effects of L2-regularization via the protocol recommended by PyTorch, namely adding `weight_decay` parameter to the optimizer, e.g. replacing
+I studied effects of L2-regularization via the protocol recommended by PyTorch, namely adding `weight_decay` parameter to the optimizer, e.g. replacing
 
 ```python
 optimizer = optim.SGD(sparse_net.parameters(), lr=lr, momentum=momentum)
@@ -73,16 +73,9 @@ with
 optimizer = optim.SGD(sparse_net.parameters(), lr=lr, momentum=momentum, weight_decay=1e-3)
 ```
 
+I started with (unrecorded) experiments with `weight_decay=1e-5` and `weight_decay=1e-4`, and the results were unremarkable: first there were signs of some moderate positive learning, which tended to give way to some moderate negative learning around the time when the signs of overfitting/failing to generalize started to appear.
 
-[...]
-
-The first experimental notebook confirmes the conjecture stated in that issue:
-
-https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
-
-We also see that this level of regularization makes the model generalize nicely, while without regularization it tends to somewhat overfit, cf. the original Jupiter notebook:
-
-https://github.com/anhinga/synapses/blob/master/MNIST_demo.ipynb
+At that moment I realized that better instrumentation is needed.
 
 Because the effects are visually subtle in this experiment, and one is always asking oneself, "do I actually see this here (the preponderance of blue or yellow in the central area)?", I added the trend curves showing average connectivity values for squares with sides 2, 4, 6, .., 26, 28 around the center of the heat map, by modifying
 
@@ -114,7 +107,15 @@ def show_MNIST_connections(model):
 
 The first couple of points on those trend curves are too jittery to matter much, but the rest give a good idea of how the connectivity changes from the center of the square to its borders.
 
+[...]
 
+The first experimental notebook confirmes the conjecture stated in that issue:
+
+https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
+
+We also see that this level of regularization makes the model generalize nicely, while without regularization it tends to somewhat overfit, cf. the original Jupiter notebook:
+
+https://github.com/anhinga/synapses/blob/master/MNIST_demo.ipynb
 
 ## Baseline study
 
