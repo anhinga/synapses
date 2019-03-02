@@ -264,6 +264,8 @@ for epoch in range(1, epochs + 1):
 
 in the last triplet of experiments.
 
+---
+
 In the extra round of experiments
 
 https://github.com/anhinga/synapses/blob/master/Extra.ipynb
@@ -282,9 +284,29 @@ Train set: Average loss: 0.0428, Accuracy: 98.69%
 Test set: Average loss: 0.0884, Accuracy: 97.21%
 ```
 
-and I run the last triplet of experiments with 1e-3 regularization (that run was unremarkable, but demonstrated a shift from virtually no network topology learning to positive topology learning in the first two experiments of the triplet, and a shoft from strongly pronounced negative topology learning to virtually no topology learning in the last experiment of the triplet).
+and I run the last triplet of experiments with 1e-3 regularization (that run was unremarkable, but demonstrated a shift from virtually no network topology learning to positive network topology learning in the first two experiments of the triplet, and a shift from strongly pronounced negative topology learning to virtually no network topology learning in the last experiment of the triplet).
 
 ## Future work
+
+The following directions of future work seem promising
+
+### Regularization experiments
+
+[...]
+
+### Changes in evolutionary scheme
+
+[...]
+
+### Recurrent networks and more interesting cases of topology learning
+
+[...]
+
+### Acceleration of training, possibly including complete rewrites using existing sparse matrix implementations
+
+[...]
+
+
 
 **This is currently work in progress**
 
