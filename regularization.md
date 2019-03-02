@@ -8,6 +8,12 @@ One starts with initializing sparse layers with random connectivity and then tra
 
 The work was done for feedforward neural nets and for restricted Boltzmann machines. For the case of restricted Boltzmann machines the authors also demonstrated the ability of the system to learn advantageous network topology, forming higher density of connections in the active zone and lower density of connections in the non-meaningful margins.
 
+In November 2018, Michael Klear implemented this scheme in PyTorch for feedforward neural nets and wrote a related blog post at https://towardsdatascience.com/the-sparse-future-of-deep-learning-bce05e8e094a
+
+He demonstrated the ability of the system to learn the network topology contrasting the active zone and the margin for the case of feedforward neural nets.
+
+I became interested in this implementation in February 2019, because I wanted to experiment with this neuroevolutionary scheme, and because PyTorch is my favorite machine learning platform at the moment.
+
 [...]
 
 
