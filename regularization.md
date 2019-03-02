@@ -296,9 +296,7 @@ It makes sense to continue looking for more favorable regularization coefficient
 
 There is no requirement that `weight_decay` should stay constant in time, or that it should be the same for all layers. It would be interesting to try other forms of regularization, such as L1 or L1+L2.
 
-In particular, given that we see underfitting from the very beginning with `weight_decay=1e-2`
-
-[...]
+In particular, given that we see underfitting from the very beginning with `weight_decay=1e-2`, and that we still seem to get a bit of overfitting further down the line with `weight_decay=1e-3`, it seems promising to try the regularization mode with `weight_decay` gradually increasing as training goes on.
 
 ### Changes in evolutionary scheme
 
