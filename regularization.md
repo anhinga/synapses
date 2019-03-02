@@ -4,7 +4,7 @@
 
 In 2017, Mocanu et al. pubslihed a remarkable neuroevolutionary scheme for training sparse neural nets (arxiv: 1707.04780, then appearing in Nature Communications **9** (19 June 2018), open source repository: https://github.com/dcmocanu/sparse-evolutionary-artificial-neural-networks )
 
-One starts with initializing sparse layers with random connectivity and then trains by repeating the following 2-step cycle: do some training, delete a fraction of connections with weights closest to zero, and recreate random new connections instead of the deleted ones.
+One starts with initializing sparse layers with random connectivity and then trains by repeating the following 2-step cycle a number of times: do some training, delete a fraction of connections with weights closest to zero, and recreate random new connections instead of the deleted ones.
 
 The work was done for feedforward neural nets and for restricted Boltzmann machines. For the case of restricted Boltzmann machines the authors also demonstrated the ability of the system to learn advantageous network topology, forming higher density of connections in the active zone and lower density of connections in the non-meaningful margins.
 
