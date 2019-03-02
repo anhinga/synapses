@@ -144,6 +144,10 @@ for epoch in range(1, epochs + 1):
     time.sleep(10) # YOU MIGHT WANT TO CHANGE THIS NUMBER OR REMOVE THIS LINE
 ```
 
+---
+
+Let's proceed to the actual experimental runs:
+
 [...]
 
 The first experimental notebook confirmes the conjecture stated in that issue:
