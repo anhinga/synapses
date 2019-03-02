@@ -316,12 +316,12 @@ It would be interesting to try to do this with less structured varieties of recu
 
 It might be of particular interest if one focuses on learning the network topology (LSTMs already come with quite a bit of predefined topological structure, while, for example, Recurrent Identity Networks don't have much a priori structure, but merely a better regularization setup compared to naive vanilla RNNs).
 
-### Acceleration of training, possibly including complete rewrites using existing sparse matrix implementations
+### Acceleration of training, possibly including complete rewrites of the system using existing sparse matrix implementations
 
-[...]
+One might, for example, consider using "PyTorch Extension Library of Optimized Autograd Sparse Matrix Operations", https://github.com/rusty1s/pytorch_sparse
+
+This has good potential for making things faster.
+
+For this particular problem one would use the Sparse-Dense matrix multiplication, but for more elaborate setups such as as Graph Neural Networks or Dataflow Matrix Machines (https://github.com/jsa-aerial/DMM) one would typically use Sparse-Sparse matrix multiplication.
 
 
-
-**This is currently work in progress**
-
-**I am going to continue editing this write-up - I expect to be done with all this by March 4, 2019.**
