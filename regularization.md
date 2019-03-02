@@ -288,7 +288,7 @@ and I run the last triplet of experiments with 1e-3 regularization. That run was
 
 ## Future work
 
-The following directions of future work seem promising
+The following directions of future work seem promising.
 
 ### Regularization experiments
 
