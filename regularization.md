@@ -26,13 +26,13 @@ This text is a write-up for this experimental investigation.
 
 ## Conjectures and high-level description of experimental findings
 
-We will call the network topology learning demonstrated by Mocanu et al **positive learning**, and we will call the inverse pattern of the network topology learning emerging in the runs performed by Michael Klear **negative learning**. ("Negative" here does not a priori implies "bad", although as we will see below, in this series of experiments negative learning is usually associated with some overfitting/failure to generalize.)
+We will call the network topology learning demonstrated by Mocanu et al **positive learning**, and we will call the inverse pattern of the network topology learning emerging in the runs performed by Michael Klear **negative learning**. ("Negative" here does not a priori imply "bad", although as we will see below, in this series of experiments negative learning is usually associated with some overfitting/failure to generalize.)
 
-The main conjecture I made was that this effect was related to the absense of regularization in the original code. The logic I followed was that in the absence of regularization, when the weights pointing from the outlying areas are created, they remain unchanged by training. At the same time, meaningful connections are changed by training, and occasionally become small and get eliminated.
+The main conjecture I made was that this effect was related to the absence of regularization in the original code. The logic I followed was that in the absence of regularization, when the weights pointing from the outlying areas are created, they tend to remain unchanged by training. At the same time, meaningful connections are changed by training, and occasionally become small and therefore get eliminated more frequently.
 
 At the same time, if one were to add a sufficiently strong regularization encouraging smaller weights, then one would expect the connections which are not informative to the result to decrease on average more rapidly, than the connections which are informative.
 
-The experiments we performed here and are describing below seem to confirm this conjecture.
+The experiments we performed here and are describing below seem to confirm this conjecture. Namely, when one adds sufficiently strong reglarization, negative learning is replaced by positive learning, and the stronger regularization is, the more pronounced is this effect.
 
 
 [...]
