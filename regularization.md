@@ -170,4 +170,14 @@ https://github.com/anhinga/synapses/blob/master/Experiment_1_complete.ipynb
 
 https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
 
-**I am going to do a couple of additional runs after that. And I am also going to edit this write-up - I expect to be mostly done with all this by March 4, 2019.**
+**Here are additional runs for Baseline study section:**
+
+https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
+
+https://github.com/anhinga/synapses/blob/master/Baseline_1_1.ipynb
+
+https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
+
+https://github.com/anhinga/synapses/blob/master/Extra.ipynb
+
+**I am also going to continue editing this write-up - I expect to be done with all this by March 4, 2019.**
