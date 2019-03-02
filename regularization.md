@@ -44,7 +44,7 @@ The experiments I performed here and am describing below seem to confirm this co
 
 I do observe one more puzzling effect during those baseline runs which demonstrate overfitting/failure to generalize. There are two measures of quality involved here: the **loss function** for which one trains, and **accuracy**. Usually, trends in the loss function and in the accuracy go hand in hand, both in training and in test (validation): they tend to improve simultaneously. However, when the overfitting/failure to generalize is serious, the loss function in test (validation) stops improving and starts to get worse and worse, while the loss function in training keep converging. 
 
-However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting. Why this is so remains a mystery to me.
+However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting (as if the system keeps getting gradually better in making the right predictions, despite becoming less confident in their correctness). Why this is so remains a mystery to me.
 
 ---
 
@@ -148,17 +148,19 @@ for epoch in range(1, epochs + 1):
 
 Let's proceed to the actual experimental runs:
 
-[...]
-
-**this part is still being edited**
+### weight_decay = 1e-3, 155 epochs
 
 The first experimental notebook confirmes the conjecture stated in that issue:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
 
-We also see that this level of regularization makes the model generalize nicely, while without regularization it tends to somewhat overfit, cf. the original Jupiter notebook:
+exhibits nice positive learning of network topology, while test (validation) performance is even money with
 
-https://github.com/anhinga/synapses/blob/master/MNIST_demo.ipynb
+https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
+
+This level of regularization makes the model generalize nicely, compared to the baseline.
+
+[...]
 
 ## Baseline study
 
