@@ -2,6 +2,14 @@
 
 # Regularization in intrinsically sparse networks
 
+In 2017, Mocanu et al. pubslihed a remarkable neuroevolutionary scheme for training sparse neural nets (arxiv: 1707.04780, Nature Communications **9**, 19 June 2018, open source repository: https://github.com/dcmocanu/sparse-evolutionary-artificial-neural-networks )
+
+One starts with initializing sparse layers with random connectivity and then trains by repeating the following 2-step cycle: do some training, delete a fraction of connections with weights closest to zero, and recreate random new connections instead of the deleted ones.
+
+The work was done for feedforward neural nets and for restricted Boltzmann machines.
+
+[...]
+
 
 This fork was originally created to investigate a strange effect described in
 
