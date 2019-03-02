@@ -46,10 +46,23 @@ We do observe one more puzzling effect during those baseline runs which demonstr
 
 However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting. Why this is so remains a mystery to me.
 
-[...]
+---
+
+The remainder of this write-up includes the following sections:
+
+  * Details of experiments with regularization
+  * Baseline study
+  * Future work
 
 
 ## Details of experiments with regularization
+
+We mostly work with the first experiment conducted by Michael Klear (the one which involves `SparseNet` class), although at the end of the paper we do a bit of experimental work with the subsequent triplet of experiments there (they involve `EvolNet` class).
+
+The identical runs give results in the same ballpark, but do not reproduce precisely despite the presence of `torch.manual_seed(0)` random seed setting in the code (it might be that all that is needed is to move this random seed setting closer to the beginning of the code).
+
+
+[...]
 
 The first experimental notebook confirmes the conjecture stated in that issue:
 
