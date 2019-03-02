@@ -107,6 +107,43 @@ def show_MNIST_connections(model):
 
 The first couple of points on those trend curves are too jittery to matter much, but the rest give a good idea of how the connectivity changes from the center of the square to its borders.
 
+I also changed the way the first experiment instrumented, in order to keep better track of train and test dynamics, replacing
+
+```python
+for epoch in range(1, epochs + 1):
+    #In the paper, evolutions occur on each epoch
+    show_MNIST_connections(sparse_net)
+    if epoch != 1:
+        sparse_net.evolve_connections()
+    set_history = train(log_interval, sparse_net, device, train_loader, optimizer, epoch, set_history)
+    #And smallest connections are removed during inference.
+    sparse_net.zero_connections()
+    set_history = test(sparse_net, device, test_loader, set_history)
+    set_history.plot()
+```
+
+with
+
+```python
+for epoch in range(1, epochs + 1):
+    #In the paper, evolutions occur on each epoch
+    if epoch != 1:
+        set_history.plot()
+    show_MNIST_connections(sparse_net)
+    if epoch != 1:
+        print('Train set: Average loss: {:.4f}, Accuracy: {:.2f}%'.format(
+            set_history.train_loss[epoch-2], 100. * set_history.train_acc[epoch-2]))
+        print('Test set: Average loss: {:.4f}, Accuracy: {:.2f}%'.format(
+            set_history.val_loss[epoch-2], 100. * set_history.val_acc[epoch-2]))
+        sparse_net.evolve_connections()
+        show_MNIST_connections(sparse_net)
+    set_history = train(log_interval, sparse_net, device, train_loader, optimizer, epoch, set_history)
+    #And smallest connections are removed during inference.
+    sparse_net.zero_connections()
+    set_history = test(sparse_net, device, test_loader, set_history)
+    time.sleep(10) # YOU MIGHT WANT TO CHANGE THIS NUMBER OR REMOVE THIS LINE
+```
+
 [...]
 
 The first experimental notebook confirmes the conjecture stated in that issue:
