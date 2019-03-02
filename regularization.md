@@ -61,6 +61,18 @@ We mostly work with the first experiment conducted by Michael Klear (the one whi
 
 The identical runs give results in the same ballpark, but do not reproduce precisely despite the presence of `torch.manual_seed(0)` random seed setting in the code (it might be that all that is needed is to move this random seed setting closer to the beginning of the code).
 
+We studied effects of L2-regularization via the protocol recommended by PyTorch, namely adding `weight_decay` parameter to the optimizer, e.g. replacing
+
+```python
+optimizer = optim.SGD(sparse_net.parameters(), lr=lr, momentum=momentum)
+```
+
+with
+
+```python
+optimizer = optim.SGD(sparse_net.parameters(), lr=lr, momentum=momentum, weight_decay=1e-3)
+```
+
 
 [...]
 
