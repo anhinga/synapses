@@ -154,9 +154,19 @@ The first experimental notebook confirmes the conjecture that negative learning 
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
 
+```
+Train set: Average loss: 0.0795, Accuracy: 97.80%
+Test set: Average loss: 0.0885, Accuracy: 97.30%
+```
+
 exhibits nice positive learning of network topology, while test (validation) performance is even money with
 
 https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
+
+```
+Train set: Average loss: 0.0428, Accuracy: 98.69%
+Test set: Average loss: 0.0884, Accuracy: 97.21%
+```
 
 This level of regularization makes the model generalize nicely, compared to the baseline.
 
@@ -166,9 +176,19 @@ Same here:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1_complete.ipynb
 
+```
+Train set: Average loss: 0.0480, Accuracy: 98.75%
+Test set: Average loss: 0.0720, Accuracy: 97.77%
+```
+
 ok positive learning of network topology, with test (validation) accuracy on par with the first experiment in
 
 https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
+
+```
+Train set: Average loss: 0.0025, Accuracy: 99.96%
+Test set: Average loss: 0.1262, Accuracy: 97.74%
+```
 
 but with loss function being much better (in terms of the loss function baseline overfits badly while showing a negative learning of network topology).
 
@@ -177,6 +197,11 @@ but with loss function being much better (in terms of the loss function baseline
 A similar run with 1e-2 regularization, which learns the network topology even better. It demonstrates a much strong positive learning of the network topology compared to 1e-3, but underfitting is well pronounced. It converges way too slowly, and it's not clear whether it would eventually reach the good numbers, if one lets it train long enough:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
+
+```
+Train set: Average loss: 0.1583, Accuracy: 96.02%
+Test set: Average loss: 0.1512, Accuracy: 96.22%
+```
 
 ## Baseline study
 
