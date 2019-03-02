@@ -1,4 +1,3 @@
-**work in progress; should be done by March 4, 2019**
 
 # Regularization in intrinsically sparse networks
 
