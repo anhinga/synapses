@@ -150,6 +150,8 @@ Let's proceed to the actual experimental runs:
 
 [...]
 
+**this part is still being edited**
+
 The first experimental notebook confirmes the conjecture stated in that issue:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
@@ -180,4 +182,4 @@ https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
 
 https://github.com/anhinga/synapses/blob/master/Extra.ipynb
 
-**I am also going to continue editing this write-up - I expect to be done with all this by March 4, 2019.**
+**I am going to continue editing this write-up - I expect to be done with all this by March 4, 2019.**
