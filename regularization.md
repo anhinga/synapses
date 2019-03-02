@@ -310,11 +310,11 @@ It might be interesting to create a fraction of the next generation from parents
 
 Applying this neuroevolutionary training scheme to various forms of recurrent networks is of interest.
 
-Recently, Shiwei Liu, Mocanu, and Pechenizkiy conducted research into using this scheme to produce Intrinsically Sparse LSTMs (https://arxiv.org/abs/1901.09208 ; no open source yet, as far as I know).
+Recently, Shiwei Liu, Mocanu, and Pechenizkiy conducted research into using this scheme to produce Intrinsically Sparse LSTMs (https://arxiv.org/abs/1901.09208 ; no open source code yet, as far as I know).
 
-It would be interesting to try to do this with less structured varieties of recurrent networks, e.g. with Recurrent Identity Networks https://arxiv.org/abs/1801.06105 (see also my comment, Understanding Recurrent Identity Networks, http://www.cs.brandeis.edu/~bukatin/recurrent-identity-networks.html )
+It would be interesting to try to do this with less structured varieties of recurrent networks, e.g. with Recurrent Identity Networks, https://arxiv.org/abs/1801.06105 (see also my comment, Understanding Recurrent Identity Networks, http://www.cs.brandeis.edu/~bukatin/recurrent-identity-networks.html )
 
-It might be of interest in terms of learning network topology (LSTMs already come with quite a bit of predefined topological structure, while, for example, Recurrent Identity Networks don't have much a priori structure, but merely a better regularization setup compared to naive vanilla RNNs).
+It might be of particular interest if one focuses on learning the network topology (LSTMs already come with quite a bit of predefined topological structure, while, for example, Recurrent Identity Networks don't have much a priori structure, but merely a better regularization setup compared to naive vanilla RNNs).
 
 ### Acceleration of training, possibly including complete rewrites using existing sparse matrix implementations
 
