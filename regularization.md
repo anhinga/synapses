@@ -14,7 +14,7 @@ He demonstrated the ability of the system to learn the network topology contrast
 
 I became interested in this implementation in February 2019, because I wanted to experiment with this neuroevolutionary scheme, and because PyTorch is my favorite machine learning platform at the moment.
 
-When I looked more closely, I noticed the following strange effect: the results reported by Michael Klear demonstrated **inverse pattern of network topology learning** compared to Mocanu et al. Namely, the density of connections in this case was **lower in the active zone and higher in the margin**.
+When I looked more closely, I noticed the following strange effect: the results reported by Michael Klear for neural nets demonstrated **inverse pattern of network topology learning** compared to the results reported by Mocanu et al. for restricted Boltzmann machines. Namely, the density of connections in this case was **lower in the active zone and higher in the margin**.
 
 I opened an issue in connection with this observation:
 
