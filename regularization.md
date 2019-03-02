@@ -180,13 +180,58 @@ https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
 
 ## Baseline study
 
-[...]
+155 epochs:
+
+Train set: Average loss: 0.0428, Accuracy: 98.69%
+Test set: Average loss: 0.0884, Accuracy: 97.21%
 
 https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
 
+718 epochs:
+
+Train set: Average loss: 0.0046, Accuracy: 99.87%
+Test set: Average loss: 0.1198, Accuracy: 97.60%
+
 https://github.com/anhinga/synapses/blob/master/Baseline_1_1.ipynb
 
+First experiment, 1000 epochs:
+
+Train set: Average loss: 0.0025, Accuracy: 99.96%
+Test set: Average loss: 0.1262, Accuracy: 97.74%
+
 https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
+
+`Baseline_complete` also contains the run of the last triplet of the original experiments with our new instrumentation reproducing a well pronounced negative learning at the last experiment (note that the last experiment in the triplet continues smoothly from the preceeding one, rather than starting at the beginning, hence the look of the curves).
+
+We replaced
+
+```python
+for epoch in range(1, epochs + 1):
+    show_MNIST_connections(evol_net)
+    evolnet_history = train(log_interval, evol_net, device, train_loader, optimizer, epoch, evolnet_history)
+    evolnet_history = test(evol_net, device, test_loader, evolnet_history)
+    evolnet_history.plot()
+```
+
+with
+
+```python
+for epoch in range(1, epochs + 1):
+    # THIS COMMENT SHOULD NOT BE HERE: In the paper, evolutions occur on each epoch
+    if epoch != 1:
+        evolnet_history.plot()
+    show_MNIST_connections(evol_net)
+    if epoch != 1:
+        print('Train set: Average loss: {:.4f}, Accuracy: {:.2f}%'.format(
+            evolnet_history.train_loss[epoch-2], 100. * evolnet_history.train_acc[epoch-2]))
+        print('Test set: Average loss: {:.4f}, Accuracy: {:.2f}%'.format(
+            evolnet_history.val_loss[epoch-2], 100. * evolnet_history.val_acc[epoch-2]))
+    evolnet_history = train(log_interval, evol_net, device, train_loader, optimizer, epoch, evolnet_history)
+    evolnet_history = test(evol_net, device, test_loader, evolnet_history)
+    time.sleep(10) # YOU MIGHT WANT TO CHANGE THIS NUMBER OR REMOVE THIS LINE
+```
+
+in the last triplet of experiments.
 
 [...]
 
