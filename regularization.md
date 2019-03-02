@@ -292,6 +292,12 @@ The following directions of future work seem promising
 
 ### Regularization experiments
 
+It makes sense to continue looking for more favorable regularization coefficients and modes.
+
+There is no requirement that `weight_decay` should stay constant in time, or that it should be the same for all layers. It would be interesting to try other forms of regularization, such as L1 or L1+L2.
+
+In particular, given that we see underfitting from the very beginning with `weight_decay=1e-2`
+
 [...]
 
 ### Changes in evolutionary scheme
