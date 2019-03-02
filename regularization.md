@@ -160,21 +160,27 @@ https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
 
 This level of regularization makes the model generalize nicely, compared to the baseline.
 
-[...]
+### weight_decay = 1e-3, 1000 epochs
 
-## Baseline study
-
-## Future work
-
-**This is currently work in progress, with further software experiments currently running. Here is a longer version of experiment_1:**
+Same here:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1_complete.ipynb
 
-**Here is a similar run with 1e-2 regularization (which seems to learn the topology even better, but converges way too slowly):**
+ok positive learning of network topology, with test (validation) accuracy on par with the first experiment in
+
+https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
+
+but with loss function being much better (in terms of the loss function baseline overfits badly while showing a negative learning of network topology).
+
+### weight_decay = 1e-2, 1000 epochs
+
+A similar run with 1e-2 regularization, which learns the network topology even better. It demonstrates a much strong positive learning of the network topology compared to 1e-3, but underfitting is well pronounced. It converges way too slowly, and it's not clear whether it would eventually reach the good numbers, if one lets it train long enough:
 
 https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
 
-**Here are additional runs for Baseline study section:**
+## Baseline study
+
+[...]
 
 https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
 
@@ -182,6 +188,12 @@ https://github.com/anhinga/synapses/blob/master/Baseline_1_1.ipynb
 
 https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
 
+[...]
+
 https://github.com/anhinga/synapses/blob/master/Extra.ipynb
+
+## Future work
+
+**This is currently work in progress**
 
 **I am going to continue editing this write-up - I expect to be done with all this by March 4, 2019.**
