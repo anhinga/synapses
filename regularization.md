@@ -38,7 +38,7 @@ The main conjecture I made was that the **negative learning** effect was related
 
 At the same time, if one were to add a sufficiently strong regularization encouraging smaller weights, then one would expect the connections which are not informative to the result to decrease on average more rapidly, than the connections which are informative.
 
-The experiments we performed here and are describing below seem to confirm this conjecture. Namely, when one adds sufficiently strong reglarization, negative learning is replaced by positive learning, and the stronger regularization is, the more pronounced is this effect.
+The experiments we performed here and are describing below seem to confirm this conjecture. Namely, **when one adds sufficiently strong reglarization, negative learning is replaced by positive learning, and the stronger regularization is, the more pronounced is this effect**.
 
 ---
 
