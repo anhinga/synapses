@@ -182,22 +182,28 @@ https://github.com/anhinga/synapses/blob/master/Experiment_2.ipynb
 
 155 epochs:
 
+```
 Train set: Average loss: 0.0428, Accuracy: 98.69%
 Test set: Average loss: 0.0884, Accuracy: 97.21%
+```
 
 https://github.com/anhinga/synapses/blob/master/Baseline_1.ipynb
 
 718 epochs:
 
+```
 Train set: Average loss: 0.0046, Accuracy: 99.87%
 Test set: Average loss: 0.1198, Accuracy: 97.60%
+```
 
 https://github.com/anhinga/synapses/blob/master/Baseline_1_1.ipynb
 
 First experiment, 1000 epochs:
 
+```
 Train set: Average loss: 0.0025, Accuracy: 99.96%
 Test set: Average loss: 0.1262, Accuracy: 97.74%
+```
 
 https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
 
