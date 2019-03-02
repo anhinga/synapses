@@ -73,7 +73,7 @@ with
 optimizer = optim.SGD(sparse_net.parameters(), lr=lr, momentum=momentum, weight_decay=1e-3)
 ```
 
-I started with (unrecorded) experiments with `weight_decay=1e-5` and `weight_decay=1e-4`, and the results were unremarkable: first there were signs of some moderate positive learning, which tended to give way to some moderate negative learning around the time when the signs of overfitting/failing to generalize started to appear.
+I started with (unrecorded) experiments with `weight_decay=1e-5` and `weight_decay=1e-4`, and the results were unremarkable: first there were signs of some moderate positive learning, which tended to give way to some moderate negative learning around the time when the signs of overfitting/failing to generalize started to appear. It was not obvious if there was much improvement compared to the baseline (it might be that the reason for needing higher `weight_decay` coefficients is that we have less weights than usual because of sparsity; I did succeed eventually with `weight_decay=1e-3` and `weight_decay=1e-2`).
 
 At that moment I realized that better instrumentation is needed.
 
