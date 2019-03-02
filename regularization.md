@@ -14,12 +14,15 @@ He demonstrated the ability of the system to learn the network topology contrast
 
 I became interested in this implementation in February 2019, because I wanted to experiment with this neuroevolutionary scheme, and because PyTorch is my favorite machine learning platform at the moment.
 
-[...]
+When I looked more closely, I noticed the following strange effect: the results reported By Michael Klear demonstrated **inverse pattern of network topology learning** compared to Mocanu et al. Namely, the density of connections in this case was **lower in the active zone and higher in the margin**.
 
-
-This fork was originally created to investigate a strange effect described in
+I opened an issue in connection with this observation:
 
 https://github.com/AlliedToasters/synapses/issues/1
+
+and then I created this fork to investigate the situation experimentally.
+
+This text is a write-up for this experimental investigation.
 
 ## Conjectures and high-level description of experimental findings
 
