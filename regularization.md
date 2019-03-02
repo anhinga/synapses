@@ -284,7 +284,7 @@ Train set: Average loss: 0.0428, Accuracy: 98.69%
 Test set: Average loss: 0.0884, Accuracy: 97.21%
 ```
 
-and I run the last triplet of experiments with 1e-3 regularization (that run was unremarkable, but demonstrated a shift from virtually no network topology learning to positive network topology learning in the first two experiments of the triplet, and a shift from strongly pronounced negative topology learning to virtually no network topology learning in the last experiment of the triplet).
+and I run the last triplet of experiments with 1e-3 regularization. That run was unremarkable, but demonstrated a shift from virtually no network topology learning to positive network topology learning in the first two experiments of the triplet, and a shift from strongly pronounced negative topology learning to virtually no network topology learning in the last experiment of the triplet, further confirming the main results of this study.
 
 ## Future work
 
