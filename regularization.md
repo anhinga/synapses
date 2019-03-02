@@ -232,7 +232,7 @@ Test set: Average loss: 0.1262, Accuracy: 97.74%
 
 https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
 
-`Baseline_complete` also contains the run of the last triplet of the original experiments with our new instrumentation reproducing a well pronounced negative learning at the last experiment (note that the last experiment in the triplet continues smoothly from the preceeding one, rather than starting at the beginning, hence the look of the curves).
+`Baseline_complete` also contains the run of the last triplet of the original experiments with our new instrumentation reproducing a well pronounced negative learning at the last experiment (note that the last experiment in the triplet continues smoothly from the preceeding one, rather than starting at the beginning, hence the look of the trend curves).
 
 I replaced
 
@@ -262,7 +262,7 @@ for epoch in range(1, epochs + 1):
     time.sleep(10) # YOU MIGHT WANT TO CHANGE THIS NUMBER OR REMOVE THIS LINE
 ```
 
-in the last triplet of experiments.
+in the last triplet of experiments. We see that strong negative learning of network topology in the last experiment of the triplet demonstrated by Michael Klear in his original experiments reproduces nicely.
 
 ---
 
