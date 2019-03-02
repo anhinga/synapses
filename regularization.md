@@ -288,7 +288,7 @@ and I run the last triplet of experiments with 1e-3 regularization. That run was
 
 ## Future work
 
-The following directions of future work seem promising.
+There is a lot of room here for interesting experiments. The following directions of future work seem promising.
 
 ### Regularization experiments
 
@@ -300,7 +300,11 @@ In particular, given that we see underfitting from the very beginning with `weig
 
 ### Changes in evolutionary scheme
 
-[...]
+Things which might be considered if one wants to tighten on a particular solution include gradual decrease in the fraction of replaced edges. One should also consider exploring gradual tightening of sparsity (can we learn a **very sparse** topology here?).
+
+This is an evolutionary scheme, where the absolute value of a weight serves as a fitness criterion for selection. However, the next generation is created completely randomly (no parents).
+
+It might be interesting to create a fraction of the next generation from parents. For example, one can create some of the new edges closely to the existing ones, and to bias the choice of parents towards those with largest absolute values of weights. (Eventually, crossover (using multiple egdes to create the new ones in the vicinity) might be considered, but that, I think, is more optional/further down the road.)
 
 ### Recurrent networks and more interesting cases of topology learning
 
