@@ -234,7 +234,7 @@ https://github.com/anhinga/synapses/blob/master/Baseline_complete.ipynb
 
 `Baseline_complete` also contains the run of the last triplet of the original experiments with our new instrumentation reproducing a well pronounced negative learning at the last experiment (note that the last experiment in the triplet continues smoothly from the preceeding one, rather than starting at the beginning, hence the look of the curves).
 
-We replaced
+I replaced
 
 ```python
 for epoch in range(1, epochs + 1):
@@ -264,9 +264,25 @@ for epoch in range(1, epochs + 1):
 
 in the last triplet of experiments.
 
-[...]
+In the extra round of experiments
 
 https://github.com/anhinga/synapses/blob/master/Extra.ipynb
+
+I rerun the first experiment with 155 epoch to demonstrate that things don't reproduce precisely in the current setup, but stay in the same ballpark, obtaining
+
+```
+Train set: Average loss: 0.0433, Accuracy: 98.63%
+Test set: Average loss: 0.0904, Accuracy: 97.30%
+```
+
+instead of
+
+```
+Train set: Average loss: 0.0428, Accuracy: 98.69%
+Test set: Average loss: 0.0884, Accuracy: 97.21%
+```
+
+and I run the last triplet of experiments with 1e-3 regularization (that run was unremarkable, but demonstrated a shift from virtually no network topology learning to positive topology learning in the first two experiments of the triplet, and a shoft from strongly pronounced negative topology learning to virtually no topology learning in the last experiment of the triplet).
 
 ## Future work
 
