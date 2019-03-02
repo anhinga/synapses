@@ -30,7 +30,7 @@ This text is a write-up for this experimental investigation.
 
 ## Conjectures and high-level description of experimental findings
 
-We will call the network topology learning demonstrated by Mocanu et al **positive learning**, and we will call the inverse pattern of the network topology learning emerging in the runs performed by Michael Klear **negative learning**. ("Negative" here does not a priori imply "bad", although as we will see below, in this series of experiments negative learning is usually associated with some overfitting/failure to generalize.)
+We will call the network topology learning demonstrated by Mocanu et al **positive learning**, and we will call the inverse pattern of the network topology learning emerging in the runs performed by Michael Klear **negative learning**. ("Negative" here does not a priori imply "bad", although as we shall see below, _in this series of experiments negative learning is usually associated with some overfitting/failure to generalize_.)
 
 ---
 
