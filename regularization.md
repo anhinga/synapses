@@ -150,7 +150,7 @@ Let's proceed to the actual experimental runs:
 
 ### weight_decay = 1e-3, 155 epochs
 
-The first experimental notebook confirmes the conjecture stated in that issue:
+The first experimental notebook confirmes the conjecture that negative learning is caused by the lack of regularization, and that with proper regularization one obtains positive learning. The experiment
 
 https://github.com/anhinga/synapses/blob/master/Experiment_1.ipynb
 
