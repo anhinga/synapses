@@ -3,7 +3,9 @@
 
 In 2017, Mocanu et al. pubslihed a remarkable neuroevolutionary scheme for training sparse neural nets (arxiv: 1707.04780, then appearing in Nature Communications **9** (19 June 2018), open source repository: https://github.com/dcmocanu/sparse-evolutionary-artificial-neural-networks )
 
-One starts with initializing sparse layers with random connectivity and then trains by repeating the following 2-step cycle a number of times: do some training, delete a fraction of connections with weights closest to zero, and recreate random new connections instead of the deleted ones.
+One starts with initializing sparse layers with random connectivity and then trains by repeating the following 2-step cycle a number of times: 
+  * do some training, 
+  * delete a fraction of connections with weights closest to zero, and recreate random new connections instead of the deleted ones.
 
 The work was done for feedforward neural nets and for restricted Boltzmann machines. For the case of restricted Boltzmann machines the authors also demonstrated the ability of the system to learn advantageous network topology, forming higher density of connections in the active zone and lower density of connections in the non-meaningful margins.
 
@@ -43,7 +45,7 @@ The experiments I performed here and am describing below seem to confirm this co
 
 I do observe one more puzzling effect during those baseline runs which demonstrate overfitting/failure to generalize. There are two measures of quality involved here: the **loss function** for which one trains, and **accuracy**. Usually, trends in the loss function and in the accuracy go hand in hand, both in training and in test (validation): they tend to improve simultaneously. However, when the overfitting/failure to generalize is serious, the loss function in test (validation) stops improving and starts to get worse and worse, while the loss function in training keep converging. 
 
-However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting (as if the system keeps getting gradually better in making the right predictions, despite becoming less confident in their correctness). Why this is so remains a mystery to me.
+However, the test (validation) accuracy does not get worse and worse; in fact, it seems to tend to keep improving slowly despite deterioration in the test (validation) loss caused by overfitting (as if the system keeps getting gradually better in making the right predictions, despite becoming less confident in their correctness). Why this is so remains a mystery to me. (It turns out that this is a frequently observed phenomenon in various overfitting scenarios; I have not seen a good write-up on it yet.)
 
 ---
 
